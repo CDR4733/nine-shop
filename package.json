@@ -1,0 +1,20 @@
+{
+  "name": "nine-shop",
+  "version": "1.0.0",
+  "main": "./src/schemas/index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "format": "prettier --write **/*.js",
+    "dev": "nodemon src/app.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5"
+  }
+}
