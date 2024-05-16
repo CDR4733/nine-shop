@@ -8,9 +8,9 @@ const connect = () => {
   mongoose
     .connect(
       // .env 파일에 민감한 정보를 추가해 사용합니다.
-      process.env.MONGODB_URL,
+      "mongodb+srv://sparta-user:aaaa4321@express-mongo.bgtlgzi.mongodb.net/?retryWrites=true&w=majority&appName=express-mongo",
       {
-        dbName: process.env.MONGODB_NAME,
+        dbName: "nine_shop",
       },
     )
     .then(() => console.log("MongoDB 연결에 성공하였습니다."))
