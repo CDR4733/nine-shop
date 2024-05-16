@@ -8,7 +8,8 @@
 표시해주는 기능도 일부 몇 가지를 제외하고는 모두 구현했습니다.   
 다만 이를 error-handler.middleware.js 파일로 통합관리하는   
 방식으로는 구현하지 못했습니다. (해당 파일은 빈 내용입니다.)   
-   
+
+<접속 되는 지 확인용도 링크>   
 AWS EC2 : <http://13.124.196.44:3000/products> ⛱️    
 Gabia : <http://cdr4733.shop:3000/products> ⛱️    
     
@@ -62,5 +63,5 @@ Gabia : <http://cdr4733.shop:3000/products> ⛱️
 
 ![image](https://github.com/CDR4733/nine-shop/assets/166963977/b8223075-8ac7-46e0-981a-a65932e57e79)
 
-AWS EC2 : <http://13.124.196.44:3000/products> ⛱️    
-Gabia : <http://cdr4733.shop:3000/products> ⛱️    
+AWS EC2 : <http://13.124.196.44:3000/> ⛱️    
+Gabia : <http://cdr4733.shop:3000/> ⛱️    
