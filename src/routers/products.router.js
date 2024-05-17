@@ -12,20 +12,20 @@ router.post("/products", async (req, res, next) => {
   // 1-1. name, description, manager, password (사용자 입력)
   const { name, description, manager, password } = req.body;
 
-  // 2. 유효성 검사
-  // 2-1. 만약 이미 등록된 상품이라면? -> 400, 이미 등록된 상품입니다.
+  // 2. 유효성 검사 / 중복 검사
+  // 2-1. 필요한 정보를 모두 입력하지 않은 경우 -> 400, 상품 정보를 모두 입력해주세요.
+  if (!name || !description || !manager || !password) {
+    return res.status(400).json({
+      status: "400",
+      message: "상품 정보를 모두 입력해주세요.",
+    });
+  }
+  // 2-2. 만약 이미 등록된 상품이라면? -> 400, 이미 등록된 상품입니다.
   const existingName = await Products.findOne({ name }).exec();
   if (existingName) {
     return res.status(400).json({
       status: "400",
       message: "이미 등록된 상품입니다.",
-    });
-  }
-  // 2-2. 필요한 정보를 모두 입력하지 않은 경우 -> 400, 상품 정보를 모두 입력해주세요.
-  if (!name || !description || !manager || !password) {
-    return res.status(400).json({
-      status: "400",
-      message: "상품 정보를 모두 입력해주세요.",
     });
   }
 
